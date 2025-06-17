@@ -1,0 +1,146 @@
+:root {
+  --morado-principal: #6a0dad;
+  --morado-claro: #e2d0ff;
+  --gris-suave: #f3f3f7;
+  --fuente-base: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--fuente-base);
+  background: linear-gradient(to bottom right, #f8f4ff, #e6e0f8);
+}
+
+.perfil-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+/* === Tarjeta base estilo "glass" === */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  width: 100%;
+  max-width: 460px;
+}
+
+/* === Perfil === */
+.perfil-card {
+  text-align: center;
+  position: relative;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  background-color: var(--morado-principal);
+  color: white;
+  border-radius: 50%;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+}
+
+.perfil-card h2 {
+  font-size: 26px;
+  color: var(--morado-principal);
+  margin-bottom: 20px;
+}
+
+.perfil-card p {
+  font-size: 16px;
+  color: #333;
+  margin: 8px 0;
+}
+
+.editar-btn {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--morado-principal);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editar-btn:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* === Manualidades === */
+.manualidades-card h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--morado-principal);
+  border-bottom: 2px solid var(--morado-claro);
+  padding-bottom: 10px;
+}
+
+.manualidades-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.manualidad-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #ffffffdd;
+  border-left: 5px solid var(--morado-principal);
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 12px rgba(106, 13, 173, 0.05);
+}
+
+.manualidad-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+  background-color: #eee;
+}
+
+.manualidad-item h4 {
+  font-size: 17px;
+  margin: 0;
+  color: #333;
+}
+
+.manualidad-item p {
+  font-size: 14px;
+  margin: 2px 0 0;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .perfil-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .editar-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,82 @@
+.vender {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.vender h2 {
+  text-align: center;
+  color: #6a0dad;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.vender-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.vender-form label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.vender-form input[type="text"],
+.vender-form select,
+.vender-form textarea {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease;
+}
+
+.vender-form input:focus,
+.vender-form select:focus,
+.vender-form textarea:focus {
+  border-color: #b76df1;
+  outline: none;
+}
+
+.vender-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.vender-form input[type="file"] {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: 1px dashed #aaa;
+  cursor: pointer;
+}
+
+.vender-form button {
+  background: linear-gradient(135deg, #6a0dad, #8e44ec);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.vender-form button:hover {
+  background: linear-gradient(135deg, #5b009b, #7d2de5);
+  transform: translateY(-2px);
+}
